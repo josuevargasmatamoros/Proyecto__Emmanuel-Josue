@@ -17,6 +17,40 @@ namespace Proyecto__Emmanuel_Josue.Formularios
             InitializeComponent();
         }
 
-       
+        private void FrmAlumnosGestion_Load(object sender, EventArgs e)
+        {
+            MdiParent = Globales.ObjetosGlobales.MiFormularioPrincipal;
+            CargarListaAlumnos();
+
+
+        }
+
+        private void CargarListaAlumnos()
+        {
+            Logica.Models.Alumno mialumno = new Logica.Models.Alumno();
+
+            DataTable lista = new DataTable();
+
+            lista = mialumno.ListarAlumnos();
+
+            DgvListaAlumnos.DataSource = lista;
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 }
+

@@ -66,7 +66,7 @@
             this.aLUMNOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDeAlumnosToolStripMenuItem});
             this.aLUMNOSToolStripMenuItem.Name = "aLUMNOSToolStripMenuItem";
-            this.aLUMNOSToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.aLUMNOSToolStripMenuItem.Size = new System.Drawing.Size(147, 38);
             this.aLUMNOSToolStripMenuItem.Text = "ALUMNOS";
             // 
             // gestionDeAlumnosToolStripMenuItem
@@ -74,13 +74,14 @@
             this.gestionDeAlumnosToolStripMenuItem.Name = "gestionDeAlumnosToolStripMenuItem";
             this.gestionDeAlumnosToolStripMenuItem.Size = new System.Drawing.Size(363, 44);
             this.gestionDeAlumnosToolStripMenuItem.Text = "Gestion de Alumnos";
+            this.gestionDeAlumnosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeAlumnosToolStripMenuItem_Click);
             // 
             // iNSTRUCTORESToolStripMenuItem
             // 
             this.iNSTRUCTORESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDeClientesToolStripMenuItem});
             this.iNSTRUCTORESToolStripMenuItem.Name = "iNSTRUCTORESToolStripMenuItem";
-            this.iNSTRUCTORESToolStripMenuItem.Size = new System.Drawing.Size(198, 36);
+            this.iNSTRUCTORESToolStripMenuItem.Size = new System.Drawing.Size(198, 38);
             this.iNSTRUCTORESToolStripMenuItem.Text = "INSTRUCTORES";
             // 
             // gestionDeClientesToolStripMenuItem
@@ -95,19 +96,19 @@
             this.listaDeClasesToolStripMenuItem,
             this.gestionDeClaseToolStripMenuItem});
             this.cLASESToolStripMenuItem.Name = "cLASESToolStripMenuItem";
-            this.cLASESToolStripMenuItem.Size = new System.Drawing.Size(114, 36);
+            this.cLASESToolStripMenuItem.Size = new System.Drawing.Size(114, 38);
             this.cLASESToolStripMenuItem.Text = "CLASES";
             // 
             // listaDeClasesToolStripMenuItem
             // 
             this.listaDeClasesToolStripMenuItem.Name = "listaDeClasesToolStripMenuItem";
-            this.listaDeClasesToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.listaDeClasesToolStripMenuItem.Size = new System.Drawing.Size(325, 44);
             this.listaDeClasesToolStripMenuItem.Text = "Lista de Clases";
             // 
             // gestionDeClaseToolStripMenuItem
             // 
             this.gestionDeClaseToolStripMenuItem.Name = "gestionDeClaseToolStripMenuItem";
-            this.gestionDeClaseToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.gestionDeClaseToolStripMenuItem.Size = new System.Drawing.Size(325, 44);
             this.gestionDeClaseToolStripMenuItem.Text = "Gestion de Clase";
             // 
             // mATRICULASToolStripMenuItem
@@ -117,7 +118,7 @@
             this.matriculasActivasToolStripMenuItem,
             this.matriculasInactivasToolStripMenuItem});
             this.mATRICULASToolStripMenuItem.Name = "mATRICULASToolStripMenuItem";
-            this.mATRICULASToolStripMenuItem.Size = new System.Drawing.Size(173, 36);
+            this.mATRICULASToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
             this.mATRICULASToolStripMenuItem.Text = "MATRICULAS";
             // 
             // listaMatriculasToolStripMenuItem
@@ -143,7 +144,7 @@
             this.pAGOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDePagosToolStripMenuItem});
             this.pAGOSToolStripMenuItem.Name = "pAGOSToolStripMenuItem";
-            this.pAGOSToolStripMenuItem.Size = new System.Drawing.Size(107, 36);
+            this.pAGOSToolStripMenuItem.Size = new System.Drawing.Size(107, 38);
             this.pAGOSToolStripMenuItem.Text = "PAGOS";
             // 
             // gestionDePagosToolStripMenuItem
@@ -163,6 +164,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmVentanaPrincipal";
             this.Text = "CENTRO DE CONTROL";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmVentanaPrincipal_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

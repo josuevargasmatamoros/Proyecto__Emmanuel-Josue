@@ -71,6 +71,7 @@
     <Compile Include="Formularios\FrmVentanaPrincipal.Designer.cs">
       <DependentUpon>FrmVentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globales\ObjetosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmAlumnosGestion.resx">
@@ -112,7 +113,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Globales\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
   <ItemGroup>

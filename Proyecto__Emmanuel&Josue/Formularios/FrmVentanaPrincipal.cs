@@ -17,6 +17,19 @@ namespace Proyecto__Emmanuel_Josue.Formularios
             InitializeComponent();
         }
 
-        
+        private void gestionDeAlumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.ObjetosGlobales.MiFormularioDeGestionDeAlumnos.Visible)
+            {
+                Globales.ObjetosGlobales.MiFormularioDeGestionDeAlumnos = new FrmAlumnosGestion();
+
+                Globales.ObjetosGlobales.MiFormularioDeGestionDeAlumnos.Show();
+            }
+        }
+
+        private void FrmVentanaPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
