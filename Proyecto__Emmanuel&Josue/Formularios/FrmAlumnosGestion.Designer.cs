@@ -31,28 +31,6 @@
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DgvListaAlumnos = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TxtDataTimeAlumno = new System.Windows.Forms.TextBox();
-            this.TxtEmailAlumno = new System.Windows.Forms.TextBox();
-            this.TxtTelefonoAlumno = new System.Windows.Forms.TextBox();
-            this.TxtDireccionAlumno = new System.Windows.Forms.TextBox();
-            this.TxtFechaNacimientoAlumno = new System.Windows.Forms.TextBox();
-            this.TxtApellidosAlumno = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtAlumnoNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.BtnCerrar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnModificar = new System.Windows.Forms.Button();
             this.Colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colapellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +38,26 @@
             this.Coldireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coltelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtID = new System.Windows.Forms.TextBox();
+            this.TxtEmailAlumno = new System.Windows.Forms.TextBox();
+            this.TxtTelefonoAlumno = new System.Windows.Forms.TextBox();
+            this.TxtDireccionAlumno = new System.Windows.Forms.TextBox();
+            this.TxtFechaNacimientoAlumno = new System.Windows.Forms.TextBox();
+            this.TxtApellidosAlumno = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtAlumnoNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnCerrar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaAlumnos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -108,15 +106,81 @@
             this.DgvListaAlumnos.TabIndex = 2;
             this.DgvListaAlumnos.VirtualMode = true;
             // 
+            // Colid
+            // 
+            this.Colid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Colid.DataPropertyName = "id";
+            this.Colid.HeaderText = "ID";
+            this.Colid.MinimumWidth = 10;
+            this.Colid.Name = "Colid";
+            this.Colid.ReadOnly = true;
+            this.Colid.Width = 80;
+            // 
+            // Colnombre
+            // 
+            this.Colnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Colnombre.DataPropertyName = "nombre";
+            this.Colnombre.HeaderText = "nombre";
+            this.Colnombre.MinimumWidth = 10;
+            this.Colnombre.Name = "Colnombre";
+            this.Colnombre.ReadOnly = true;
+            this.Colnombre.Width = 150;
+            // 
+            // Colapellido
+            // 
+            this.Colapellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Colapellido.DataPropertyName = "apellido";
+            this.Colapellido.HeaderText = "apellido";
+            this.Colapellido.MinimumWidth = 10;
+            this.Colapellido.Name = "Colapellido";
+            this.Colapellido.ReadOnly = true;
+            this.Colapellido.Width = 150;
+            // 
+            // Colfecha_de_nacimiento
+            // 
+            this.Colfecha_de_nacimiento.DataPropertyName = "fecha_de_nacimiento";
+            this.Colfecha_de_nacimiento.HeaderText = "Fecha De Nacimiento";
+            this.Colfecha_de_nacimiento.MinimumWidth = 10;
+            this.Colfecha_de_nacimiento.Name = "Colfecha_de_nacimiento";
+            this.Colfecha_de_nacimiento.ReadOnly = true;
+            this.Colfecha_de_nacimiento.Width = 200;
+            // 
+            // Coldireccion
+            // 
+            this.Coldireccion.DataPropertyName = "direccion";
+            this.Coldireccion.HeaderText = "direccion";
+            this.Coldireccion.MinimumWidth = 10;
+            this.Coldireccion.Name = "Coldireccion";
+            this.Coldireccion.ReadOnly = true;
+            this.Coldireccion.Width = 200;
+            // 
+            // Coltelefono
+            // 
+            this.Coltelefono.DataPropertyName = "telefono";
+            this.Coltelefono.HeaderText = "telefono";
+            this.Coltelefono.MinimumWidth = 10;
+            this.Coltelefono.Name = "Coltelefono";
+            this.Coltelefono.ReadOnly = true;
+            this.Coltelefono.Width = 200;
+            // 
+            // Colemail
+            // 
+            this.Colemail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Colemail.DataPropertyName = "email";
+            this.Colemail.HeaderText = "email";
+            this.Colemail.MinimumWidth = 10;
+            this.Colemail.Name = "Colemail";
+            this.Colemail.ReadOnly = true;
+            this.Colemail.Width = 120;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TxtDataTimeAlumno);
+            this.groupBox1.Controls.Add(this.TxtID);
             this.groupBox1.Controls.Add(this.TxtEmailAlumno);
             this.groupBox1.Controls.Add(this.TxtTelefonoAlumno);
             this.groupBox1.Controls.Add(this.TxtDireccionAlumno);
             this.groupBox1.Controls.Add(this.TxtFechaNacimientoAlumno);
             this.groupBox1.Controls.Add(this.TxtApellidosAlumno);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -124,7 +188,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TxtAlumnoNombre);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.TxtID);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(17, 398);
             this.groupBox1.Name = "groupBox1";
@@ -133,12 +196,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion Necesaria";
             // 
-            // TxtDataTimeAlumno
+            // TxtID
             // 
-            this.TxtDataTimeAlumno.Location = new System.Drawing.Point(135, 235);
-            this.TxtDataTimeAlumno.Name = "TxtDataTimeAlumno";
-            this.TxtDataTimeAlumno.Size = new System.Drawing.Size(416, 31);
-            this.TxtDataTimeAlumno.TabIndex = 15;
+            this.TxtID.Location = new System.Drawing.Point(121, 41);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Size = new System.Drawing.Size(427, 31);
+            this.TxtID.TabIndex = 15;
             // 
             // TxtEmailAlumno
             // 
@@ -176,15 +239,6 @@
             this.TxtApellidosAlumno.Name = "TxtApellidosAlumno";
             this.TxtApellidosAlumno.Size = new System.Drawing.Size(427, 31);
             this.TxtApellidosAlumno.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 238);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "DataTime";
             // 
             // label8
             // 
@@ -246,14 +300,6 @@
             this.label3.Size = new System.Drawing.Size(87, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre";
-            // 
-            // TxtID
-            // 
-            this.TxtID.Enabled = false;
-            this.TxtID.Location = new System.Drawing.Point(58, 41);
-            this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(92, 31);
-            this.TxtID.TabIndex = 1;
             // 
             // label2
             // 
@@ -330,73 +376,6 @@
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
             // 
-            // Colid
-            // 
-            this.Colid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Colid.DataPropertyName = "id";
-            this.Colid.HeaderText = "ID";
-            this.Colid.MinimumWidth = 10;
-            this.Colid.Name = "Colid";
-            this.Colid.ReadOnly = true;
-            this.Colid.Width = 80;
-            // 
-            // Colnombre
-            // 
-            this.Colnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Colnombre.DataPropertyName = "nombre";
-            this.Colnombre.HeaderText = "nombre";
-            this.Colnombre.MinimumWidth = 10;
-            this.Colnombre.Name = "Colnombre";
-            this.Colnombre.ReadOnly = true;
-            this.Colnombre.Width = 150;
-            // 
-            // Colapellido
-            // 
-            this.Colapellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Colapellido.DataPropertyName = "apellido";
-            this.Colapellido.HeaderText = "apellido";
-            this.Colapellido.MinimumWidth = 10;
-            this.Colapellido.Name = "Colapellido";
-            this.Colapellido.ReadOnly = true;
-            this.Colapellido.Width = 150;
-            // 
-            // Colfecha_de_nacimiento
-            // 
-            this.Colfecha_de_nacimiento.DataPropertyName = "fecha_de_nacimiento";
-            this.Colfecha_de_nacimiento.HeaderText = "Fecha De Nacimiento";
-            this.Colfecha_de_nacimiento.MinimumWidth = 10;
-            this.Colfecha_de_nacimiento.Name = "Colfecha_de_nacimiento";
-            this.Colfecha_de_nacimiento.ReadOnly = true;
-            this.Colfecha_de_nacimiento.Width = 200;
-            // 
-            // Coldireccion
-            // 
-            this.Coldireccion.DataPropertyName = "direccion";
-            this.Coldireccion.HeaderText = "direccion";
-            this.Coldireccion.MinimumWidth = 10;
-            this.Coldireccion.Name = "Coldireccion";
-            this.Coldireccion.ReadOnly = true;
-            this.Coldireccion.Width = 200;
-            // 
-            // Coltelefono
-            // 
-            this.Coltelefono.DataPropertyName = "telefono";
-            this.Coltelefono.HeaderText = "telefono";
-            this.Coltelefono.MinimumWidth = 10;
-            this.Coltelefono.Name = "Coltelefono";
-            this.Coltelefono.ReadOnly = true;
-            this.Coltelefono.Width = 200;
-            // 
-            // Colemail
-            // 
-            this.Colemail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Colemail.DataPropertyName = "email";
-            this.Colemail.HeaderText = "email";
-            this.Colemail.MinimumWidth = 10;
-            this.Colemail.Name = "Colemail";
-            this.Colemail.ReadOnly = true;
-            this.Colemail.Width = 120;
-            // 
             // FrmAlumnosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -430,7 +409,6 @@
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridView DgvListaAlumnos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TxtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
@@ -438,9 +416,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtAlumnoNombre;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtDataTimeAlumno;
         private System.Windows.Forms.TextBox TxtEmailAlumno;
         private System.Windows.Forms.TextBox TxtTelefonoAlumno;
         private System.Windows.Forms.TextBox TxtDireccionAlumno;
@@ -458,5 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coldireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coltelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colemail;
+        private System.Windows.Forms.TextBox TxtID;
     }
 }
