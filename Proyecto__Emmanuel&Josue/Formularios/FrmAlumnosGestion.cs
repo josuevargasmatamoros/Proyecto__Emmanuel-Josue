@@ -30,6 +30,7 @@ namespace Proyecto__Emmanuel_Josue.Formularios
         {
             MdiParent = Globales.ObjetosGlobales.MiFormularioPrincipal;
             CargarListaAlumnos();
+            ActivarBotonAgregar();
 
 
         }
@@ -103,6 +104,27 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
         }
 
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarForm();
+            ActivarBotonAgregar();
+        }
+
+        private void ActivarBotonAgregar()
+        {
+            BtnAgregar.Enabled = true;
+            BtnModificar.Enabled = false;
+            BtnEliminar.Enabled = false;
+        }
+
+        private void ActivarBotonesModificarYEliminar()
+        {
+            BtnAgregar.Enabled = false;
+            BtnModificar.Enabled = true;
+            BtnEliminar.Enabled = true;
+        }
+
         private void LimpiarForm() 
         { 
         TxtID.Clear();
@@ -116,6 +138,58 @@ namespace Proyecto__Emmanuel_Josue.Formularios
         }
 
         
+
+        private void DgvListaAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (DgvListaAlumnos.SelectedRows.Count == 1)
+            {
+                LimpiarForm();
+
+                //como necesito consultar por el ID del usuario, se debe extraer el valor de la columna 
+                //correspondiente del DGV, en este caso "ColUsuarioID"
+                DataGridViewRow MiDgvFila = DgvListaAlumnos.SelectedRows[0];
+                int IDAlumno = Convert.ToInt32(MiDgvFila.Cells["Colid"].Value);
+
+                MiAlumnoLocal = new Logica.Models.Alumno();
+                MiAlumnoLocal = MiAlumnoLocal.ConsultarPorID(IDAlumno);
+
+                if (MiAlumnoLocal != null)
+                {
+                    //una vez que se ha asegurado que existe el usuario y que tiene datos se "dibujan" esos 
+                    //datos en los controles correspondientes del formulario 
+
+                    TxtID.Text = MiAlumnoLocal.ID;
+                    TxtAlumnoNombre.Text = MiAlumnoLocal.Nombre;
+                    TxtApellidosAlumno.Text = MiAlumnoLocal.Apellidos;
+                    TxtFechaNacimientoAlumno.Text = MiAlumnoLocal.FechaDeNacimiento;
+                    TxtTelefonoAlumno.Text = MiAlumnoLocal.Telefono;
+                    TxtEmailAlumno.Text = MiAlumnoLocal.Email;
+                    TxtDireccionAlumno.Text = MiAlumnoLocal.Direccion;
+
+                    //en este caso no quiere que se muestre la contraseña ya que está encriptada y no se 
+                    //requiere actualizarla y se deja en blanco el campo de texto 
+
+
+
+                    ActivarBotonesModificarYEliminar();
+
+                }
+            }
+
+
+        }
+
+        private void DgvListaAlumnos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            DgvListaAlumnos.ClearSelection();
+        }
+
+        private void BtnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            LimpiarForm();
+            ActivarBotonAgregar();
+        }
     }
 }
 

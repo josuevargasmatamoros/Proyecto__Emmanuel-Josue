@@ -105,6 +105,8 @@
             this.DgvListaAlumnos.Size = new System.Drawing.Size(1459, 322);
             this.DgvListaAlumnos.TabIndex = 2;
             this.DgvListaAlumnos.VirtualMode = true;
+            this.DgvListaAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaAlumnos_CellClick);
+            this.DgvListaAlumnos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvListaAlumnos_DataBindingComplete);
             // 
             // Colid
             // 
@@ -205,21 +207,21 @@
             // 
             // TxtEmailAlumno
             // 
-            this.TxtEmailAlumno.Location = new System.Drawing.Point(912, 133);
+            this.TxtEmailAlumno.Location = new System.Drawing.Point(912, 80);
             this.TxtEmailAlumno.Name = "TxtEmailAlumno";
             this.TxtEmailAlumno.Size = new System.Drawing.Size(369, 31);
             this.TxtEmailAlumno.TabIndex = 14;
             // 
             // TxtTelefonoAlumno
             // 
-            this.TxtTelefonoAlumno.Location = new System.Drawing.Point(912, 74);
+            this.TxtTelefonoAlumno.Location = new System.Drawing.Point(912, 41);
             this.TxtTelefonoAlumno.Name = "TxtTelefonoAlumno";
             this.TxtTelefonoAlumno.Size = new System.Drawing.Size(369, 31);
             this.TxtTelefonoAlumno.TabIndex = 13;
             // 
             // TxtDireccionAlumno
             // 
-            this.TxtDireccionAlumno.Location = new System.Drawing.Point(912, 177);
+            this.TxtDireccionAlumno.Location = new System.Drawing.Point(912, 136);
             this.TxtDireccionAlumno.Multiline = true;
             this.TxtDireccionAlumno.Name = "TxtDireccionAlumno";
             this.TxtDireccionAlumno.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -243,7 +245,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(810, 136);
+            this.label8.Location = new System.Drawing.Point(810, 83);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 25);
             this.label8.TabIndex = 8;
@@ -252,7 +254,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(810, 80);
+            this.label7.Location = new System.Drawing.Point(810, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 25);
             this.label7.TabIndex = 7;
@@ -261,7 +263,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(804, 190);
+            this.label6.Location = new System.Drawing.Point(804, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 25);
             this.label6.TabIndex = 6;
@@ -336,6 +338,7 @@
             this.BtnLimpiar.TabIndex = 5;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click_1);
             // 
             // BtnCerrar
             // 

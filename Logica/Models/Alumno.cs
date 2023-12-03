@@ -47,6 +47,43 @@ namespace Logica.Models
             return R;
         }
 
+        public Alumno ConsultarPorID(int IDAlumno)
+        {
+            Alumno R = new Alumno();
+
+            //esta funcion retorna un objeto de tipo usuario con datos en los atributos. 
+            //es una variedad de ConsultarPorID que me permite manipular el objeto y no
+            //solo saber si el usuario existe o no a traves de un bool
+
+            Conexion MyCnn = new Conexion();
+
+            MyCnn.ListaDeParametros.Add(new SqlParameter("@id", IDAlumno));
+
+            DataTable DatosAlumno = new DataTable();
+
+            DatosAlumno = MyCnn.EjecutarSELECT("SAlumnosConsultarPorID");
+
+            if (DatosAlumno != null && DatosAlumno.Rows.Count > 0)
+            {
+                //como tenemos que llenar un objeto compuesto (por el rol de usuario) 
+                //debemos extraer los datos de la consulta y llenar los atributos 
+                //correspondientes del objeto de tipo Usuario R. 
+
+                //acá capturamos los datos de la fila 0 del resultado 
+                DataRow MiFila = DatosAlumno.Rows[0];
+
+                R.ID = Convert.ToString(MiFila["id"]);
+                R.Nombre = Convert.ToString(MiFila["nombre"]);
+                R.Apellidos = Convert.ToString(MiFila["apellido"]);
+                R.FechaDeNacimiento = Convert.ToString(MiFila["fecha_de_nacimiento"]);
+                R.Telefono = Convert.ToString(MiFila["telefono"]);
+                R.Email = Convert.ToString(MiFila["email"]);
+                R.Direccion = Convert.ToString(MiFila["direccion"]);
+                
+            }
+
+            return R;
+        }
 
 
 
