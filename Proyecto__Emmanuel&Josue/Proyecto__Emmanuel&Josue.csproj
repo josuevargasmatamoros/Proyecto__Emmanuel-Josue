@@ -59,6 +59,12 @@
     <Compile Include="Formularios\FrmAlumnosGestion.Designer.cs">
       <DependentUpon>FrmAlumnosGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmInstructoresGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmInstructoresGestion.Designer.cs">
+      <DependentUpon>FrmInstructoresGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmAlumnosGestion.resx">
       <DependentUpon>FrmAlumnosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmInstructoresGestion.resx">
+      <DependentUpon>FrmInstructoresGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

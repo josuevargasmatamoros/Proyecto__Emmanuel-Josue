@@ -7,21 +7,37 @@ using System.Threading.Tasks;
 
 namespace Logica.Models
 {
-    public class ClienteRol
+    public class Clases
     {
 
 
-        public int ClienteID { get; set;}
+        public int IDClase
+        { get; set; }
 
-        public string Nombre { get; set; }
+
+        public string Clase { get; set; }
+
 
         public DataTable Listar()
         {
             DataTable R = new DataTable();
 
+            Conexion MiCnn = new Conexion();
+
+            R = MiCnn.EjecutarSELECT("");
+
             return R;
+
         }
-
-
     }
+
+
+
+
+
+
+
+
+
 }
+

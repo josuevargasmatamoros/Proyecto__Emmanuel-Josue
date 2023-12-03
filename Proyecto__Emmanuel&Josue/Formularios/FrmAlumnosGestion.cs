@@ -86,15 +86,16 @@ namespace Proyecto__Emmanuel_Josue.Formularios
                     if (ok)
                     {
                         MessageBox.Show("Alumno ingresado correctamente!", "ok", MessageBoxButtons.OK);
-
-                         LimpiarForm();
-                        
+                       
+                        LimpiarForm();
+                        CargarListaAlumnos();
 
                     }
                     else
                     {
                         MessageBox.Show("El Alumno no se pudo ingresar....", "N'ok", MessageBoxButtons.OK);
                     }
+
                 }
             }
 
@@ -137,7 +138,7 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
         }
 
-        
+
 
         private void DgvListaAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -190,6 +191,77 @@ namespace Proyecto__Emmanuel_Josue.Formularios
             LimpiarForm();
             ActivarBotonAgregar();
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            if (MiAlumnoLocal.ConsultarPorID())
+            {
+
+                MiAlumnoLocal.ID = TxtID.Text.Trim();
+                MiAlumnoLocal.Nombre = TxtAlumnoNombre.Text.Trim();
+                MiAlumnoLocal.Apellidos = TxtApellidosAlumno.Text.Trim();
+                MiAlumnoLocal.FechaDeNacimiento = TxtFechaNacimientoAlumno.Text.Trim();
+                MiAlumnoLocal.Telefono = TxtTelefonoAlumno.Text.Trim();
+                MiAlumnoLocal.Email = TxtEmailAlumno.Text.Trim();
+                MiAlumnoLocal.Direccion = TxtDireccionAlumno.Text.Trim();
+
+                DialogResult Resp = MessageBox.Show("¿Desea modificar el alumno?", "???",
+                                                          MessageBoxButtons.YesNo);
+                if (Resp == DialogResult.Yes)
+                {
+                    //procedemos a modificar el registro del usuario 
+                    MiAlumnoLocal.Actualizar();
+                    
+                        MessageBox.Show("Alumno modificado correctamente!", "ok", MessageBoxButtons.OK);
+
+                        LimpiarForm();
+                        CargarListaAlumnos();
+                        ActivarBotonAgregar();
+                    
+                }
+
+
+                //en el diagrama expandido de casos de uso para el tema Usuario, se indica 
+                // que para modificar o eliminar primero se debe consultar por el ID
+                }
+
+
+            }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MiAlumnoLocal.ConsultarPorID())
+            {
+                string msg = string.Format("Esta seguro de eliminar el alumno {0}", MiAlumnoLocal.Nombre);
+
+                DialogResult respuesta = MessageBox.Show(msg, "Confirmacion requerida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
+                {
+
+                    MiAlumnoLocal.Eliminar();
+                    MessageBox.Show("Alumno eliminado correctamente!", "ok", MessageBoxButtons.OK);
+
+                    LimpiarForm();
+                    CargarListaAlumnos();
+                    ActivarBotonAgregar();
+
+
+                }
+
+
+            }
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+           
+                this.Close();
+           
+        }
+
+       
     }
 }
+
 

@@ -13,7 +13,6 @@ namespace Logica.Models
     {
         
         public string ID { get; set; }
-
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string FechaDeNacimiento { get; set; }
@@ -46,6 +45,73 @@ namespace Logica.Models
 
             return R;
         }
+
+        public bool Eliminar()
+        {
+            bool R = false;
+
+            Conexion MiCnn = new Conexion();
+
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@id", this.ID));
+
+            int resultado = MiCnn.EjecutarDML("SPAlumnosEliminar");
+
+            if (resultado > 0) R = true;
+
+            return R;
+        }
+
+
+
+        public bool Actualizar()
+        {
+            bool R = false;
+
+            Conexion MiCnn = new Conexion();
+
+            //ahora agregamos todos los parámetros que solicita el SP de agregar
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@id", this.ID));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@nombre", this.Nombre));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@apellido", this.Apellidos));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@fecha_de_nacimiento", this.FechaDeNacimiento));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@telefono", this.Telefono));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@direccion", this.Direccion));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@email", this.Email));
+
+
+            int resultado = MiCnn.EjecutarDML("SPAlumnosActualizar");
+
+            if (resultado > 0) R = true;
+
+            return R;
+        }
+
+
+        public bool ConsultarPorID()
+        {
+            bool R = false;
+
+            Conexion MyCnn = new Conexion();
+
+            MyCnn.ListaDeParametros.Add(new SqlParameter("@id", this.ID));
+
+            DataTable DatosUsuario = new DataTable();
+
+            DatosUsuario = MyCnn.EjecutarSELECT("SAlumnosConsultarPorID");
+
+            if (DatosUsuario != null && DatosUsuario.Rows.Count > 0)
+            {
+                //el usuario existe
+                R = true;
+            }
+
+            return R;
+        }
+
+
+
+
+
 
         public Alumno ConsultarPorID(int IDAlumno)
         {

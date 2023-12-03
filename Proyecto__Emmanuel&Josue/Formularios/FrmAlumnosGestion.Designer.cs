@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.DgvListaAlumnos = new System.Windows.Forms.DataGridView();
             this.Colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,22 +60,6 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Location = new System.Drawing.Point(99, 12);
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(471, 31);
-            this.TxtBuscar.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Buscar";
-            // 
             // DgvListaAlumnos
             // 
             this.DgvListaAlumnos.AllowUserToAddRows = false;
@@ -94,7 +76,7 @@
             this.Coltelefono,
             this.Colemail});
             this.DgvListaAlumnos.GridColor = System.Drawing.Color.Linen;
-            this.DgvListaAlumnos.Location = new System.Drawing.Point(12, 69);
+            this.DgvListaAlumnos.Location = new System.Drawing.Point(12, 12);
             this.DgvListaAlumnos.MultiSelect = false;
             this.DgvListaAlumnos.Name = "DgvListaAlumnos";
             this.DgvListaAlumnos.ReadOnly = true;
@@ -102,10 +84,11 @@
             this.DgvListaAlumnos.RowHeadersWidth = 82;
             this.DgvListaAlumnos.RowTemplate.Height = 33;
             this.DgvListaAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListaAlumnos.Size = new System.Drawing.Size(1459, 322);
+            this.DgvListaAlumnos.Size = new System.Drawing.Size(1459, 365);
             this.DgvListaAlumnos.TabIndex = 2;
             this.DgvListaAlumnos.VirtualMode = true;
             this.DgvListaAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaAlumnos_CellClick);
+           
             this.DgvListaAlumnos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvListaAlumnos_DataBindingComplete);
             // 
             // Colid
@@ -352,6 +335,7 @@
             this.BtnCerrar.TabIndex = 6;
             this.BtnCerrar.Text = "Cerrar";
             this.BtnCerrar.UseVisualStyleBackColor = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // BtnEliminar
             // 
@@ -365,6 +349,7 @@
             this.BtnEliminar.TabIndex = 7;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
@@ -378,6 +363,7 @@
             this.BtnModificar.TabIndex = 8;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // FrmAlumnosGestion
             // 
@@ -391,8 +377,6 @@
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DgvListaAlumnos);
-            this.Controls.Add(this.TxtBuscar);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAlumnosGestion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -402,14 +386,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridView DgvListaAlumnos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;

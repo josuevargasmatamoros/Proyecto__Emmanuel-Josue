@@ -31,5 +31,15 @@ namespace Proyecto__Emmanuel_Josue.Formularios
         {
             Application.Exit();
         }
+
+        private void gestionDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.ObjetosGlobales.MiFormularioGestionDeInstroctores.Visible)
+            {
+                Globales.ObjetosGlobales.MiFormularioGestionDeInstroctores = new FrmInstructoresGestion();
+
+                Globales.ObjetosGlobales.MiFormularioGestionDeInstroctores.Show();
+            }
+        }
     }
 }

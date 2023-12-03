@@ -57,7 +57,7 @@
             this.pAGOSToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1472, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1472, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,8 +87,9 @@
             // gestionDeClientesToolStripMenuItem
             // 
             this.gestionDeClientesToolStripMenuItem.Name = "gestionDeClientesToolStripMenuItem";
-            this.gestionDeClientesToolStripMenuItem.Size = new System.Drawing.Size(354, 44);
-            this.gestionDeClientesToolStripMenuItem.Text = "Gestion de Clientes";
+            this.gestionDeClientesToolStripMenuItem.Size = new System.Drawing.Size(393, 44);
+            this.gestionDeClientesToolStripMenuItem.Text = "Gestion de Instructores";
+            this.gestionDeClientesToolStripMenuItem.Click += new System.EventHandler(this.gestionDeClientesToolStripMenuItem_Click);
             // 
             // cLASESToolStripMenuItem
             // 
