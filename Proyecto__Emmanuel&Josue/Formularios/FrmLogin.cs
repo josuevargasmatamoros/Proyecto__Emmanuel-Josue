@@ -35,8 +35,30 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            Globales.ObjetosGlobales.MiFormularioPrincipal.Show();
-            this.Hide();
+            if (!string.IsNullOrEmpty(TxtUsuario.Text.Trim()) &&
+               !string.IsNullOrEmpty(TxtContrasennia.Text.Trim()))
+            {
+                string usuario = TxtUsuario.Text.Trim();
+                string contrasennia = TxtContrasennia.Text.Trim();
+
+                int idUsuario = Globales.ObjetosGlobales.MiUsuarioGlobal.ValidarIngreso(usuario, contrasennia);
+
+                if (idUsuario > 0)
+                {
+                    Globales.ObjetosGlobales.MiUsuarioGlobal = Globales.ObjetosGlobales.MiUsuarioGlobal.ConsultarPorID(idUsuario);
+
+                    Globales.ObjetosGlobales.MiFormularioPrincipal.Show();
+                    this.Hide();
+                }
+                else
+                {
+
+                    MessageBox.Show("Acceso deneegado", "ERROR de validacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtUsuario.Focus();
+                    TxtUsuario.SelectAll();
+
+                }
+            }
         }
     }
 }

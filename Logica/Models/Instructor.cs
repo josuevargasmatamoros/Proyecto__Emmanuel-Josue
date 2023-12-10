@@ -15,7 +15,7 @@ namespace Logica.Models
         {
 
         }
-        public int ID_Instructor { get; set; }
+        public string ID_Instructor { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
@@ -154,7 +154,7 @@ namespace Logica.Models
                 //acá capturamos los datos de la fila 0 del resultado 
                 DataRow MiFila = DatosUsuario.Rows[0];
 
-                R.ID_Instructor = Convert.ToInt32(MiFila["ID_Instructor"]);
+                R.ID_Instructor = Convert.ToString(MiFila["ID_Instructor"]);
                 R.Nombre = Convert.ToString(MiFila["Nombre"]);
                 R.Apellido = Convert.ToString(MiFila["Apellido"]);
                 R.Email = Convert.ToString(MiFila["Email"]);
@@ -211,7 +211,7 @@ namespace Logica.Models
 
             string PasswordEncriptado = myEncriptador.EncriptarEnUnSentido(pContrasennia);
 
-            myCnn.ListaDeParametros.Add(new SqlParameter("@instructores", pInstructor));
+            myCnn.ListaDeParametros.Add(new SqlParameter("@Usuario", pInstructor));
             myCnn.ListaDeParametros.Add(new SqlParameter("@Contrasennia", PasswordEncriptado));
 
             DataTable resultado = myCnn.EjecutarSELECT("SPInstructorValidarIngreso");

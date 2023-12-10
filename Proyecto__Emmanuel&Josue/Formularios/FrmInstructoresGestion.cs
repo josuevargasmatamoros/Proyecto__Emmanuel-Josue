@@ -187,7 +187,7 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
 
                 MiInstructorLocal = new Logica.Models.Instructor();
-
+                MiInstructorLocal.ID_Instructor = TxtIDInstructor.Text.Trim();
                 MiInstructorLocal.Nombre = TxtInstructorNombre.Text.Trim();
                 MiInstructorLocal.Apellido = TxtInstructorApellido.Text.Trim();
                 MiInstructorLocal.Email = TxtInstructorEmail.Text.Trim();
@@ -273,7 +273,7 @@ namespace Proyecto__Emmanuel_Josue.Formularios
             if (MiInstructorLocal.ConsultarPorID())
             {
 
-                
+                MiInstructorLocal.ID_Instructor = TxtIDInstructor.Text.Trim();
                 MiInstructorLocal.Nombre = TxtInstructorNombre.Text.Trim();
                 MiInstructorLocal.Apellido = TxtInstructorApellido.Text.Trim();
                 MiInstructorLocal.Email = TxtInstructorEmail.Text.Trim();
@@ -299,6 +299,11 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
 
             }
+        }
+
+        private void DgvListaInstructores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

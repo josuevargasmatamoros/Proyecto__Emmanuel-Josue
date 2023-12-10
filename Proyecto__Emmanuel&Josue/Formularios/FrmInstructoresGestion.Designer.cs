@@ -34,6 +34,7 @@
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtContrasenniaInstructor = new System.Windows.Forms.TextBox();
             this.TxtIDInstructor = new System.Windows.Forms.TextBox();
             this.TxtInstructorTelefono = new System.Windows.Forms.TextBox();
             this.TxtInstructorEmail = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.TxtInstructorNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtContrasenniaInstructor = new System.Windows.Forms.TextBox();
             this.DgvListaInstructores = new System.Windows.Forms.DataGridView();
             this.ColID_Instructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -148,6 +148,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion Requerida por instructor";
             // 
+            // TxtContrasenniaInstructor
+            // 
+            this.TxtContrasenniaInstructor.Location = new System.Drawing.Point(135, 235);
+            this.TxtContrasenniaInstructor.Name = "TxtContrasenniaInstructor";
+            this.TxtContrasenniaInstructor.Size = new System.Drawing.Size(413, 31);
+            this.TxtContrasenniaInstructor.TabIndex = 18;
+            // 
             // TxtIDInstructor
             // 
             this.TxtIDInstructor.Location = new System.Drawing.Point(121, 41);
@@ -237,13 +244,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ID";
             // 
-            // TxtContrasenniaInstructor
-            // 
-            this.TxtContrasenniaInstructor.Location = new System.Drawing.Point(135, 235);
-            this.TxtContrasenniaInstructor.Name = "TxtContrasenniaInstructor";
-            this.TxtContrasenniaInstructor.Size = new System.Drawing.Size(413, 31);
-            this.TxtContrasenniaInstructor.TabIndex = 18;
-            // 
             // DgvListaInstructores
             // 
             this.DgvListaInstructores.AllowUserToAddRows = false;
@@ -271,6 +271,7 @@
             this.DgvListaInstructores.TabIndex = 9;
             this.DgvListaInstructores.VirtualMode = true;
             this.DgvListaInstructores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaInstructores_CellClick);
+            this.DgvListaInstructores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaInstructores_CellContentClick);
             this.DgvListaInstructores.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvListaInstructores_DataBindingComplete);
             // 
             // ColID_Instructor

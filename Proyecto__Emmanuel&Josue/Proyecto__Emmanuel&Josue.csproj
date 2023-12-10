@@ -59,6 +59,12 @@
     <Compile Include="Formularios\FrmAlumnosGestion.Designer.cs">
       <DependentUpon>FrmAlumnosGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmClases.Designer.cs">
+      <DependentUpon>FrmClases.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmInstructoresGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +83,20 @@
     <Compile Include="Formularios\FrmVentanaPrincipal.Designer.cs">
       <DependentUpon>FrmVentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmGestionClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmGestionClases.Designer.cs">
+      <DependentUpon>FrmGestionClases.cs</DependentUpon>
+    </Compile>
     <Compile Include="Globales\ObjetosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmAlumnosGestion.resx">
       <DependentUpon>FrmAlumnosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmClases.resx">
+      <DependentUpon>FrmClases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmInstructoresGestion.resx">
       <DependentUpon>FrmInstructoresGestion.cs</DependentUpon>
@@ -91,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmVentanaPrincipal.resx">
       <DependentUpon>FrmVentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGestionClases.resx">
+      <DependentUpon>FrmGestionClases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

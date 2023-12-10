@@ -103,14 +103,16 @@
             // listaDeClasesToolStripMenuItem
             // 
             this.listaDeClasesToolStripMenuItem.Name = "listaDeClasesToolStripMenuItem";
-            this.listaDeClasesToolStripMenuItem.Size = new System.Drawing.Size(325, 44);
+            this.listaDeClasesToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.listaDeClasesToolStripMenuItem.Text = "Lista de Clases";
+            this.listaDeClasesToolStripMenuItem.Click += new System.EventHandler(this.listaDeClasesToolStripMenuItem_Click);
             // 
             // gestionDeClaseToolStripMenuItem
             // 
             this.gestionDeClaseToolStripMenuItem.Name = "gestionDeClaseToolStripMenuItem";
-            this.gestionDeClaseToolStripMenuItem.Size = new System.Drawing.Size(325, 44);
+            this.gestionDeClaseToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.gestionDeClaseToolStripMenuItem.Text = "Gestion de Clase";
+            this.gestionDeClaseToolStripMenuItem.Click += new System.EventHandler(this.gestionDeClaseToolStripMenuItem_Click);
             // 
             // mATRICULASToolStripMenuItem
             // 

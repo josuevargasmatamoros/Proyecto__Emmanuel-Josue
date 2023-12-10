@@ -41,5 +41,25 @@ namespace Proyecto__Emmanuel_Josue.Formularios
                 Globales.ObjetosGlobales.MiFormularioGestionDeInstroctores.Show();
             }
         }
+
+        private void listaDeClasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.ObjetosGlobales.MiFormularioClases.Visible)
+            {
+                Globales.ObjetosGlobales.MiFormularioClases = new FrmClases();
+
+                Globales.ObjetosGlobales.MiFormularioClases.Show();
+            }
+        }
+
+        private void gestionDeClaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.ObjetosGlobales.MiFormularioGestionDeClases.Visible)
+            {
+                Globales.ObjetosGlobales.MiFormularioGestionDeClases = new FrmGestionClases();
+
+                Globales.ObjetosGlobales.MiFormularioGestionDeClases.Show();
+            }
+        }
     }
 }

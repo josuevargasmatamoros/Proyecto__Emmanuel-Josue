@@ -21,7 +21,15 @@ namespace Proyecto__Emmanuel_Josue.Globales
         public static Formularios.FrmInstructoresGestion
             MiFormularioGestionDeInstroctores = new FrmInstructoresGestion();
 
-        //public static Logica.Models.Usuario MiUsuarioGlobal = new Logica.Models.Usuario();
+        public static Formularios.FrmClases
+           MiFormularioClases = new FrmClases();
+
+        public static Formularios.FrmGestionClases
+            MiFormularioGestionDeClases = new FrmGestionClases();
+
+
+
+        public static Logica.Models.Instructor MiUsuarioGlobal = new Logica.Models.Instructor();
 
         // public static Formularios.FrmMovimientosInventario
         // MiformularioMovimientos = new Formularios.FrmMovimientosInventario();
