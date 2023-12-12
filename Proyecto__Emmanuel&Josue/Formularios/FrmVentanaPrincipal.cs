@@ -61,5 +61,19 @@ namespace Proyecto__Emmanuel_Josue.Formularios
                 Globales.ObjetosGlobales.MiFormularioGestionDeClases.Show();
             }
         }
+
+        private void listaMatriculasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Globales.ObjetosGlobales.MiFormularioGestionMatricula.Visible)
+            {
+                Globales.ObjetosGlobales.MiFormularioGestionMatricula = new FrmMatricula();
+
+                Globales.ObjetosGlobales.MiFormularioGestionMatricula.Show();
+            }
+
+
+
+        }
     }
 }

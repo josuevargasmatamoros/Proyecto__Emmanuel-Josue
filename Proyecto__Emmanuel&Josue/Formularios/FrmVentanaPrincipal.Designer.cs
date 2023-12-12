@@ -38,8 +38,6 @@
             this.gestionDeClaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mATRICULASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaMatriculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matriculasActivasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matriculasInactivasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pAGOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDePagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -103,23 +101,21 @@
             // listaDeClasesToolStripMenuItem
             // 
             this.listaDeClasesToolStripMenuItem.Name = "listaDeClasesToolStripMenuItem";
-            this.listaDeClasesToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.listaDeClasesToolStripMenuItem.Size = new System.Drawing.Size(325, 44);
             this.listaDeClasesToolStripMenuItem.Text = "Lista de Clases";
             this.listaDeClasesToolStripMenuItem.Click += new System.EventHandler(this.listaDeClasesToolStripMenuItem_Click);
             // 
             // gestionDeClaseToolStripMenuItem
             // 
             this.gestionDeClaseToolStripMenuItem.Name = "gestionDeClaseToolStripMenuItem";
-            this.gestionDeClaseToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.gestionDeClaseToolStripMenuItem.Size = new System.Drawing.Size(325, 44);
             this.gestionDeClaseToolStripMenuItem.Text = "Gestion de Clase";
             this.gestionDeClaseToolStripMenuItem.Click += new System.EventHandler(this.gestionDeClaseToolStripMenuItem_Click);
             // 
             // mATRICULASToolStripMenuItem
             // 
             this.mATRICULASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listaMatriculasToolStripMenuItem,
-            this.matriculasActivasToolStripMenuItem,
-            this.matriculasInactivasToolStripMenuItem});
+            this.listaMatriculasToolStripMenuItem});
             this.mATRICULASToolStripMenuItem.Name = "mATRICULASToolStripMenuItem";
             this.mATRICULASToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
             this.mATRICULASToolStripMenuItem.Text = "MATRICULAS";
@@ -127,20 +123,9 @@
             // listaMatriculasToolStripMenuItem
             // 
             this.listaMatriculasToolStripMenuItem.Name = "listaMatriculasToolStripMenuItem";
-            this.listaMatriculasToolStripMenuItem.Size = new System.Drawing.Size(354, 44);
+            this.listaMatriculasToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.listaMatriculasToolStripMenuItem.Text = "Lista Matriculas";
-            // 
-            // matriculasActivasToolStripMenuItem
-            // 
-            this.matriculasActivasToolStripMenuItem.Name = "matriculasActivasToolStripMenuItem";
-            this.matriculasActivasToolStripMenuItem.Size = new System.Drawing.Size(354, 44);
-            this.matriculasActivasToolStripMenuItem.Text = "Matriculas Activas";
-            // 
-            // matriculasInactivasToolStripMenuItem
-            // 
-            this.matriculasInactivasToolStripMenuItem.Name = "matriculasInactivasToolStripMenuItem";
-            this.matriculasInactivasToolStripMenuItem.Size = new System.Drawing.Size(354, 44);
-            this.matriculasInactivasToolStripMenuItem.Text = "Matriculas Inactivas";
+            this.listaMatriculasToolStripMenuItem.Click += new System.EventHandler(this.listaMatriculasToolStripMenuItem_Click);
             // 
             // pAGOSToolStripMenuItem
             // 
@@ -188,8 +173,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeClasesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaMatriculasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem matriculasActivasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem matriculasInactivasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDePagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDeClaseToolStripMenuItem;
     }
