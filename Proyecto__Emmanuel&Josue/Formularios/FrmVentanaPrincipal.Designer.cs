@@ -55,7 +55,7 @@
             this.pAGOSToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1472, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1472, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +64,7 @@
             this.aLUMNOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDeAlumnosToolStripMenuItem});
             this.aLUMNOSToolStripMenuItem.Name = "aLUMNOSToolStripMenuItem";
-            this.aLUMNOSToolStripMenuItem.Size = new System.Drawing.Size(147, 38);
+            this.aLUMNOSToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
             this.aLUMNOSToolStripMenuItem.Text = "ALUMNOS";
             // 
             // gestionDeAlumnosToolStripMenuItem
@@ -79,7 +79,7 @@
             this.iNSTRUCTORESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDeClientesToolStripMenuItem});
             this.iNSTRUCTORESToolStripMenuItem.Name = "iNSTRUCTORESToolStripMenuItem";
-            this.iNSTRUCTORESToolStripMenuItem.Size = new System.Drawing.Size(198, 38);
+            this.iNSTRUCTORESToolStripMenuItem.Size = new System.Drawing.Size(198, 36);
             this.iNSTRUCTORESToolStripMenuItem.Text = "INSTRUCTORES";
             // 
             // gestionDeClientesToolStripMenuItem
@@ -95,7 +95,7 @@
             this.listaDeClasesToolStripMenuItem,
             this.gestionDeClaseToolStripMenuItem});
             this.cLASESToolStripMenuItem.Name = "cLASESToolStripMenuItem";
-            this.cLASESToolStripMenuItem.Size = new System.Drawing.Size(114, 38);
+            this.cLASESToolStripMenuItem.Size = new System.Drawing.Size(114, 36);
             this.cLASESToolStripMenuItem.Text = "CLASES";
             // 
             // listaDeClasesToolStripMenuItem
@@ -117,13 +117,13 @@
             this.mATRICULASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaMatriculasToolStripMenuItem});
             this.mATRICULASToolStripMenuItem.Name = "mATRICULASToolStripMenuItem";
-            this.mATRICULASToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
+            this.mATRICULASToolStripMenuItem.Size = new System.Drawing.Size(173, 36);
             this.mATRICULASToolStripMenuItem.Text = "MATRICULAS";
             // 
             // listaMatriculasToolStripMenuItem
             // 
             this.listaMatriculasToolStripMenuItem.Name = "listaMatriculasToolStripMenuItem";
-            this.listaMatriculasToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.listaMatriculasToolStripMenuItem.Size = new System.Drawing.Size(310, 44);
             this.listaMatriculasToolStripMenuItem.Text = "Lista Matriculas";
             this.listaMatriculasToolStripMenuItem.Click += new System.EventHandler(this.listaMatriculasToolStripMenuItem_Click);
             // 
@@ -132,7 +132,7 @@
             this.pAGOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDePagosToolStripMenuItem});
             this.pAGOSToolStripMenuItem.Name = "pAGOSToolStripMenuItem";
-            this.pAGOSToolStripMenuItem.Size = new System.Drawing.Size(107, 38);
+            this.pAGOSToolStripMenuItem.Size = new System.Drawing.Size(107, 36);
             this.pAGOSToolStripMenuItem.Text = "PAGOS";
             // 
             // gestionDePagosToolStripMenuItem
@@ -154,6 +154,7 @@
             this.Text = "CENTRO DE CONTROL";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmVentanaPrincipal_FormClosed);
+            this.Load += new System.EventHandler(this.FrmVentanaPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

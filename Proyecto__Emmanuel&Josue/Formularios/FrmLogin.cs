@@ -36,7 +36,7 @@ namespace Proyecto__Emmanuel_Josue.Formularios
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(TxtUsuario.Text.Trim()) &&
-               !string.IsNullOrEmpty(TxtContrasennia.Text.Trim()))
+   !string.IsNullOrEmpty(TxtContrasennia.Text.Trim()))
             {
                 string usuario = TxtUsuario.Text.Trim();
                 string contrasennia = TxtContrasennia.Text.Trim();
@@ -59,6 +59,11 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
                 }
             }
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

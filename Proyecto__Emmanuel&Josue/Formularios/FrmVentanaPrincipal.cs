@@ -75,5 +75,10 @@ namespace Proyecto__Emmanuel_Josue.Formularios
 
 
         }
+
+        private void FrmVentanaPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
